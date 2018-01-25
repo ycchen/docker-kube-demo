@@ -71,4 +71,49 @@ Running via Spring preloader in process 10500
   classes, '.form-horizontal' or '.form-inline', as the following:
 
     = simple_form_for(@user, html: { class: 'form-horizontal' }) do |form|
+
+# Generate scaffold for User model
+ rails g scaffold User first_name last_name email
+
+ Running via Spring preloader in process 10582
+      invoke  active_record
+      create    db/migrate/20180125161805_create_users.rb
+      create    app/models/user.rb
+      invoke    rspec
+      create      spec/models/user_spec.rb
+      invoke  resource_route
+       route    resources :users
+      invoke  scaffold_controller
+      create    app/controllers/users_controller.rb
+      invoke    erb
+      create      app/views/users
+      create      app/views/users/index.html.erb
+      create      app/views/users/edit.html.erb
+      create      app/views/users/show.html.erb
+      create      app/views/users/new.html.erb
+      create      app/views/users/_form.html.erb
+      invoke    rspec
+      create      spec/controllers/users_controller_spec.rb
+      create      spec/views/users/edit.html.erb_spec.rb
+      create      spec/views/users/index.html.erb_spec.rb
+      create      spec/views/users/new.html.erb_spec.rb
+      create      spec/views/users/show.html.erb_spec.rb
+      create      spec/routing/users_routing_spec.rb
+      invoke      rspec
+      create        spec/requests/users_spec.rb
+      invoke    helper
+      create      app/helpers/users_helper.rb
+      invoke      rspec
+      create        spec/helpers/users_helper_spec.rb
+      invoke    jbuilder
+      create      app/views/users/index.json.jbuilder
+      create      app/views/users/show.json.jbuilder
+      create      app/views/users/_user.json.jbuilder
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/users.coffee
+      invoke    scss
+      create      app/assets/stylesheets/users.scss
+      invoke  scss
+      create    app/assets/stylesheets/scaffolds.scss
 ```
